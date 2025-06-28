@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育熵权TOPSIS模型</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <a href="index.html" class="top-left-button" role="button">返回主页</a>
+            <h1>教育熵权TOPSIS模型分析</h1>
+        </header>
+
+        <div class="map-section">
+            <div class="map-sidebar" style="width: 400px;">
+                <div class="side-panel" style="flex: 1.5;">
+                    <h2>各评价指标权重分布</h2>
+                    <div id="weights-chart" class="chart-container"></div>
+                </div>
+                <div class="side-panel" style="flex: 1;">
+                    <h2>各年份教育发展水平接近度趋势</h2>
+                    <div id="trend-chart" class="chart-container"></div>
+                </div>
+            </div>
+            
+            <div class="main-content" style="flex: 3; display: flex; flex-direction: column; gap: 20px;">
+                <div class="row">
+                    <div class="panel">
+                        <h2>教育指标TOPSIS评价结果热力图</h2>
+                        <div id="topsis-heatmap" class="chart-container" style="height: 320px;"></div>
+                    </div>
+                    <div class="panel">
+                        <h2>不同年份教育关键指标对比</h2>
+                        <div id="key-indicators-radar" class="chart-container" style="height: 320px;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel">
+                        <h2>教育各指标相关性热力图</h2>
+                        <div id="correlation-heatmap" class="chart-container" style="height: 320px;"></div>
+                    </div>
+                    <div class="panel">
+                        <h2>排名前5指标在不同年份的表现对比</h2>
+                        <div id="top5-indicators-radar" class="chart-container" style="height: 320px;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel">
+                        <h2>教育总经费与财政性经费变化趋势</h2>
+                        <div id="edu-funding-chart" class="chart-container" style="height: 280px;"></div>
+                    </div>
+                    <div class="panel">
+                        <h2>学校事业收入与社会捐赠变化趋势</h2>
+                        <div id="school-income-chart" class="chart-container" style="height: 280px;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel">
+                        <h2>高等教育毕业生数变化趋势</h2>
+                        <div id="higher-edu-grads-chart" class="chart-container" style="height: 280px;"></div>
+                    </div>
+                    <div class="panel">
+                        <h2>成人教育与基础教育毕业生数变化趋势</h2>
+                        <div id="adult-basic-grads-chart" class="chart-container" style="height: 280px;"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel">
+                        <h2>高等教育师资变化趋势</h2>
+                        <div id="higher-edu-teachers-chart" class="chart-container" style="height: 280px;"></div>
+                    </div>
+                    <div class="panel">
+                        <h2>基础教育师资变化趋势</h2>
+                        <div id="basic-edu-teachers-chart" class="chart-container" style="height: 280px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>数据来源：国家统计局 | 最近更新：2024年</p>
+        </footer>
+    </div>
+    
+    <!-- ECharts 核心库 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- TOPSIS 页面专属图表脚本 -->
+    <script src="topsis_charts.js"></script>
+</body>
+</html> 
